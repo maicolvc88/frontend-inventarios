@@ -147,6 +147,15 @@ export default function TipoUsuarios() {
                       value={usuario.nombre}
                       name="nombre"
                     />
+                    <label for="recipient-name" className="col-form-label">Correo:</label>
+                    <input 
+                      type="text" 
+                      className="form-control" 
+                      id="recipient-name"
+                      onChange={handleChange}
+                      value={usuario.email}
+                      name="email"
+                    />
                     <select 
                       class="form-select" 
                       aria-label="Default select example"
@@ -189,7 +198,7 @@ export default function TipoUsuarios() {
         />
         <button 
           type="button" 
-          className="btn btn-primary" 
+          className="btn btn-success" 
           data-bs-toggle="modal" 
           data-bs-target="#exampleModal" 
         >
@@ -241,7 +250,7 @@ export default function TipoUsuarios() {
                   <button 
                     id={usuario._id}
                     type="button" 
-                    className="btn btn-success"
+                    className="btn btn-warning"
                     data-bs-toggle="modal" 
                     data-bs-target="#exampleModal2"
                     onClick={setUsuarioPorId}

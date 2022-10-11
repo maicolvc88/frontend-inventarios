@@ -1,3 +1,4 @@
+import { queryByAttribute } from '@testing-library/react'
 import dayjs from 'dayjs'
 import React, { useEffect, useState } from 'react'
 import { borrarTipoEquipoPorID, crearTipoEquipo, editarTipoEquipoPorID, obtenerTiposEquipos } from '../../services/TipoEquipoService'
@@ -18,7 +19,7 @@ export default function TipoEquipos() {
     status: false,
     msg: ''
   })
-  //const [tipoId, setTipoId] = useState('')
+  //const [tipoEquipo, setTisetTipoEquipopoId] = useState('')
 
   const listTipoEquipos = async () => {
     setLoading(true)
@@ -34,9 +35,9 @@ export default function TipoEquipos() {
     }
   }
 
-  useEffect(() => { listTipoEquipos()}, [query])
-
-  
+  useEffect(() => {
+    listTipoEquipos();
+  }, [query])
 
   const cambiarSwitche = () => {
     setQuery(!query)
@@ -46,7 +47,7 @@ export default function TipoEquipos() {
     setErrorSend({status: false, msg: ''})
     setLoading(true)
     try{
-      const res = await crearTipoEquipo(tipoEquipo)
+      const res = await crearTipoEquipo(tipoEquipo.nombre)
       console.log(res)
       setLoading(true)
       setTipoEquipo({nombre: ''})
@@ -189,7 +190,7 @@ export default function TipoEquipos() {
         />
         <button 
           type="button" 
-          className="btn btn-primary" 
+          className="btn btn-success" 
           data-bs-toggle="modal" 
           data-bs-target="#exampleModal" 
         >
@@ -241,7 +242,7 @@ export default function TipoEquipos() {
                   <button 
                     id={tipoEquipo._id}
                     type="button" 
-                    className="btn btn-success"
+                    className="btn btn-warning"
                     data-bs-toggle="modal" 
                     data-bs-target="#exampleModal2"
                     onClick={setTipoPorId}

@@ -1,12 +1,8 @@
 import React from 'react'
 
 export default function Modal({
-  titulo, 
-  guardar,
-  element,
-  change
-}) {
-
+  titulo, guardar, element, change}) 
+  {
   const guadarElement = (e) => {
     e.preventDefault();
     guardar()

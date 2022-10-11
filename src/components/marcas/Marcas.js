@@ -189,7 +189,7 @@ export default function Marcas() {
         />
         <button 
           type="button" 
-          className="btn btn-primary" 
+          className="btn btn-success" 
           data-bs-toggle="modal" 
           data-bs-target="#exampleModal" 
         >
@@ -241,7 +241,7 @@ export default function Marcas() {
                   <button 
                     id={marca._id}
                     type="button" 
-                    className="btn btn-success"
+                    className="btn btn-warning"
                     data-bs-toggle="modal" 
                     data-bs-target="#exampleModal2"
                     onClick={setMarcaPorId}

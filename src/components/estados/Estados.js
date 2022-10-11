@@ -182,14 +182,14 @@ export default function TipoEstados() {
           </div>
         </div>
         <Modal 
-          titulo={'Tipo de Estado'}
+          titulo={'Estado'}
           guardar={guardarEstado}
           element={estado}
           change={handleChange}
         />
         <button 
           type="button" 
-          className="btn btn-primary" 
+          className="btn btn-success" 
           data-bs-toggle="modal" 
           data-bs-target="#exampleModal" 
         >
@@ -241,7 +241,7 @@ export default function TipoEstados() {
                   <button 
                     id={estado._id}
                     type="button" 
-                    className="btn btn-success"
+                    className="btn btn-warning"
                     data-bs-toggle="modal" 
                     data-bs-target="#exampleModal2"
                     onClick={setEstadoPorId}

@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 export default function NavBar({title}) {
   return (
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg bg-info">
         <div className="container-fluid">
             <Link 
                 to='/'
@@ -34,21 +34,21 @@ export default function NavBar({title}) {
                 </NavLink>
                 <NavLink 
                     to='/usuarios'
-                    tabIndex={2}
+                    tabIndex={3}
                     className="nav-item nav-link"
                 >
                     Usuarios
                 </NavLink>
                 <NavLink 
                     to='/marcas'
-                    tabIndex={2}
+                    tabIndex={4}
                     className="nav-item nav-link"
                 >
                     Marcas
                 </NavLink>
                 <NavLink 
                     to='/inventarios'
-                    tabIndex={2}
+                    tabIndex={5}
                     className="nav-item nav-link"
                 >
                     Inventarios
