@@ -34,7 +34,9 @@ export default function TipoEquipos() {
     }
   }
 
-  useEffect(() => { listTipoEquipos(); [query]})
+  useEffect(() => { listTipoEquipos()}, [query])
+
+  
 
   const cambiarSwitche = () => {
     setQuery(!query)
